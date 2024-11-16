@@ -1,31 +1,37 @@
 Algoritmo "verificacao_digito"
 
+//QUEST√ÉO INCORRETA
+
+//Escreva um programa que l√™ um inteiro positivo e verifica se ele cont√©m o d√≠gito 3
+//em qualquer posi√ß√£o. Exemplo: Os n√∫meros 100, 200, 1000, 103 
+//cont√™m o d√≠gito 3 em qualquer posi√ß√£o, enquanto os n√∫meros 99, 12 n√£o.
+
 Var
     digito, resto: inteiro
     contem3: logico
 
 Inicio
-    // Pedir o n˙mero para verificaÁ„o
-    escreva("Informe um n˙mero inteiro positivo para verificaÁ„o: ")
+    // Pedir o numero para verifica√ß√£o
+    escreva("Informe um numero inteiro positivo para verifica√ß√£o: ")
     leia(digito)
 
     // Inicializar a variavel que iremos usar para verificar se o numero inserido possui digito 3
-    contem3 <- falso  //iniciar com falso pois ainda n„o foi verificado se possui digito 3
+    contem3 <- falso  //iniciar com falso pois ainda n√£o foi verificado se possui digito 3
 
-    // Verificar se o n˙mero contÈm o dÌgito 3
-    enquanto digito > 0 faÁa  //enquanto o digito for maior que 0 ele continuara no loop ate o fim da verificaÁ„o(descobrir se tem digito 3)
-        resto <- digito mod 10 //ele vai retornar o RESTO da divis„o
-        se resto = 3 ent„o
+    // Verificar se o numero contem o digito 3
+    enquanto digito > 0 fa√ßa  //enquanto o digito for maior que 0 ele continuara no loop ate o fim da verifica√ß√£o(descobrir se tem digito 3)
+        resto <- digito mod 10 //ele vai retornar o RESTO da divis√£o
+        se resto = 3 ent√£o
             contem3 <- verdadeiro
         fimse
-        digito <- digito div 10  //enquanto n„o aparecer o resultado 3 ele ira tirar o ultimo digito e continuara o loop
+        digito <- digito div 10  //enquanto n√£o aparecer o resultado 3 ele ira tirar o ultimo digito e continuara o loop
     fimenquanto
 
     // mostrar o resultado
-    se contem3 ent„o
-        escreva("O n˙mero inserido CONT…M o dÌgito 3.")
-    sen„o
-        escreva("O n˙mero inserido N√O contÈm o dÌgito 3.")
+    se contem3 ent√£o
+        escreva("O numero inserido CONTEM o digito 3.")
+    sen√£o
+        escreva("O numero inserido NAO contem o digito 3.")
     fimse
 
 Fimalgoritmo
