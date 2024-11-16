@@ -1,44 +1,55 @@
 Algoritmo "sequencia-crescente"
 
+//Escreva um programa no qual o usu√°rio digita uma quantidade arbitr√°ria de n√∫meros inteiros
+positivos.
+// Quando o usu√°rio digitar um n√∫mero menor ou igual a 0, o programa deve indicar o
+//tamanho da maior sequ√™ncia crescente observada. Por exemplo, se os n√∫meros digitados
+forem 5, 10, 3, 2, 4, 7, 9, 8, 5,
+// a maior sequ√™ncia crescente √© 2, 4, 7, 9, 
+//ent√£o o programa deve mostrar na tela que a maior sequ√™ncia crescente tem 4 n√∫meros.
+// J√° a sequ√™ncia 10, 8, 7, 5, 2 est√° em ordem decrescente,
+// portanto a maior sequ√™ncia crescente observada tem tamanho 1.
+
 Var
     numero, anterior, contador, maiorseq: inteiro
 
 Inicio
-
     // Inicializar a variavel maiorseq com 0 e contador com 1
     maiorseq <- 0
     contador <- 1
 
-    // Pedir para que o usu·rio digite n˙meros inteiros positivos
-    escreval("Digite n˙meros inteiros positivos (digite um n˙mero menor ou igual a 0 para parar): ")
+    // Pedir para que o usuario digite numeros inteiros positivos
+    escreval("Digite numeros inteiros positivos (digite um numero menor ou igual a 0 para parar): ")
     leia(numero)
 
-    // Se o primeiro n˙mero for menor ou igual a 0, n„o entra no loop
-    se numero >= 0 ent„o
+    // Se o primeiro numero for menor ou igual a 0, n√£o entra no loop
+    se numero >= 0 ent√£o
         anterior <- numero //o valor de numero sera armazenado na variavel "anterior"
+        
         //se o numero for maior entrara
-        enquanto numero > 0 faÁa
+        enquanto numero > 0 fa√ßa
             leia(numero)  //vai ler outro numero
-            se numero > anterior ent„o  //se for maior que o anterior,sera uma sequencia crescente
+            se numero > anterior ent√£o  //se for maior que o anterior,sera uma sequencia crescente
                 contador <- contador + 1  // caso seja uma sequencia crescente, o contador ira armazenando essas sequencias
-            sen„o
-                // vai verificar se a sequÍncia atual foi a maior
-                se contador > maiorseq ent„o
-                    maiorseq <- contador  //Se a sequencia atual for maior, ent„o atualizaremos a maiorseq com o valor de contador.
+            sen√£o
+                // vai verificar se a sequencia atual foi a maior
+                se contador > maiorseq ent√£o
+                    maiorseq <- contador  //Se a sequencia atual for maior, ent√£o atualizaremos a maiorseq com o valor de contador.
                 fimse
-                contador <- 1  // reiniciar o contador para a nova sequÍncia
+                contador <- 1  // reiniciar o contador para a nova sequencia
             fimse
             anterior <- numero  //vai atualizar o valor da variavel anterior para o numero atual
         fimenquanto
 
-        // fazer a verificaÁ„o final( para caso do ultimo numero inserido for fazer parte da sequencia crescente)
-        se contador > maiorseq ent„o
+        // fazer a verifica√ß√£o final( para caso do ultimo numero inserido for fazer parte da sequencia crescente)
+        se contador > maiorseq ent√£o
             maiorseq <- contador
         fimse
-         //agora informar a maior sequencia crescente, e caso n„o tenha mostrar que n„o possui nenhuma sequencia crescente
-        escreval("A maior sequÍncia crescente tem ", maiorseq, " n˙meros.")
-    sen„o
-        escreval("Nenhuma sequÍncia crescente foi inserida.")
+
+        //agora informar a maior sequencia crescente, e caso n√£o tenha mostrar que n√£o possui nenhuma sequencia crescente
+        escreval("A maior sequencia crescente tem ", maiorseq, " numeros.")
+    sen√£o
+        escreval("Nenhuma sequencia crescente foi inserida.")
     fimse
 
 Fimalgoritmo
