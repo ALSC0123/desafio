@@ -6,30 +6,30 @@ Var
 
 Inicio
 
-    //pedir para informar quantos lados tera o poligono
-    escreva("Informe quantos lados terá o polígono (3, 4 ou 6): ")
+    //pedir para informar quantos lados tera o poligono 
+    escreva("Informe quantos lados terï¿½ o polï¿½gono (3, 4 ou 6): ")
     leia(poligono)
     //informar o tamanho dos lados
     escreva("Informe qual o tamanho dos lados: ")
     leia(lado)
 
     //se o poligono for 3 ele vai realizar o calculo da area e mostrar o  valor no final(valor da area)
-    se poligono = 3 então
+    se poligono = 3 entï¿½o
         area <- (lado*lado*1.73)/4
-        escreval("O valor da área é: ", area)
-    senão
+        escreval("O valor da ï¿½rea ï¿½: ", area)
+    senï¿½o
       //se o poligono for 4 ele vai realizar o calculo da area e mostrar o  valor no final(valor da area)
-        se poligono=4 então
+        se poligono=4 entï¿½o
             area <-lado*lado
-            escreval("O valor da área é: ", area)
-        senão
+            escreval("O valor da ï¿½rea ï¿½: ", area)
+        senï¿½o
           //se o poligono for 6 ele vai realizar o calculo da area e mostrar o  valor no final(valor da area)
-            se poligono=6 então
+            se poligono=6 entï¿½o
                 area <-(6*lado*lado*1.73)/4
-                escreval("O valor da área é: ", area)
-            senão
-            //caso a quantidade de lados do poligono não for 3,4 ou 6 ele ira informar que não é possivel fazer o calculo da area
-                escreval("Não é possível calcular a área deste polígono.")
+                escreval("O valor da ï¿½rea ï¿½: ", area)
+            senï¿½o
+            //caso a quantidade de lados do poligono nï¿½o for 3,4 ou 6 ele ira informar que nï¿½o ï¿½ possivel fazer o calculo da area
+                escreval("Nï¿½o ï¿½ possï¿½vel calcular a ï¿½rea deste polï¿½gono.")
             fimse
             fimse
             fimse
