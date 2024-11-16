@@ -1,32 +1,36 @@
-Algoritmo "importo-de-renda"
+Algoritmo "imposto-de-renda"
+
+//Escreva um programa que receba como entrada a base de c√°lculo mensal de um trabalhador 
+//e retorne o imposto de renda devido.
 
 Var
-      bc, imposto: real
+   bc, imposto: real
 
 Inicio
-      //pedir a base de calculo mensal para calcular o imposto de renda devido
-      escreva("Informe a base de c·lculo mensal em R$: ")
-      leia(bc)
+   //pedir a base de calculo mensal para calcular o imposto de renda devido
+   escreva("Informe a base de calculo mensal em R$: ")
+   leia(bc)
 
-      //se for menor ou igual a 1637.11 ent„o o imposto de renda devido È 0
-      se bc <= 1637.11 ent„o
-         imposto <- 0
+   //se for menor ou igual a 1637.11 ent√£o o imposto de renda devido √© 0
+   se bc <= 1637.11 ent√£o
+      imposto <- 0
+   senao
+      se bc <= 2453.50 ent√£o //se for menor ou igual a 2453.50 ent√£o sera realizado este calculo para descobrir o valor do imposto
+         imposto <- (bc*7.5/100)-122.78
       senao
-         se bc <= 2453.50 ent„o //se for menor ou igual a 2453.50 ent„o sera realizado este calculo para descobrir o valor do imposto
-            imposto <- (bc*7.5/100)-122.78
+         se bc <= 3271.38 ent√£o //se for menor ou igual a 3271.38 ent√£o sera realizado este calculo para descobrir o valor do imposto
+            imposto <- (bc*15.0/100)-306.80
          senao
-            se bc <= 3271.38 ent„o //se for menor ou igual a 3271.38 ent„o sera realizado este calculo para descobrir o valor do imposto
-               imposto <- (bc*15.0/100)-306.80
+            se bc <= 4087.65 ent√£o //se for menor ou igual a 4087.65 ent√£o sera realizado este calculo para descobrir o valor do imposto
+               imposto <- (bc*22.5/100)-552.15
             senao
-               se bc <= 4087.65 ent„o //se for menor ou igual a 4087.65 ent„o sera realizado este calculo para descobrir o valor do imposto
-                  imposto <- (bc*22.5/100)-552.15
-               senao
-                  imposto <- (bc*27.6/100)-756.53 //caso seja maior que 4087.65 ent„o sera realizado este calculo para descobrir o valor do imposto
-               fimse
+               imposto <- (bc*27.6/100)-756.53 //caso seja maior que 4087.65 ent√£o sera realizado este calculo para descobrir o valor do imposto
             fimse
          fimse
       fimse
-      //informara o valor do imposto
-      escreva("O total de imposto de renda devido È: R$", imposto)
+   fimse
+
+   //informara o valor do imposto
+   escreva("O total de imposto de renda devido √©: R$", imposto)
 
 Fimalgoritmo
