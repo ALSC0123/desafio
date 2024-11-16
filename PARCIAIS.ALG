@@ -1,57 +1,59 @@
 Algoritmo "parciais"
 
+//Fazer um programa que recebe as parciais de um aluno (0 a 100), at√© que o usu√°rio digite -1 
+//e informa se ele est√° aprovado (m√©dia maior ou igual a 70), 
+//em exame final (m√©dia entre 40 e 69) ou reprovado (m√©dia menor do que 40). 
+//Caso esteja em exame o programa deve pedir a nota do exame (0 a 100) 
+//e informar se O aluno est√° aprovado (m√©dia mais nota do exame maior ou igual a 100) 
+//ou reprovado (m√©dia mais nota do exame menor do que 100).
+
 Var
    nota, soman, contagem, media, exame: real
 
 Inicio
+    //come√ßar com as variaveis =0
+    soman <- 0
+    contagem <- 0
 
-   //comeÁar com as variaveis =0
-   soman <- 0
-   contagem <- 0
+    //pedir para que informe a nota da parcial ate que seja digitado -1
+    escreva("Digite a nota parcial (0 a 100) ou -1 para finalizar: ")
+    leia(nota)
 
-   //pedir para que informe a nota da parcial ate que seja digitado -1
-   escreva("Digite a nota parcial (0 a 100) ou -1 para finalizar: ")
-   leia(nota)
+    //enquanto a nota for diferente de -1 ele continuara pedindo
+    enquanto nota <> -1 fa√ßa
+        soman <- soman + nota //apos a primeira nota aplicada ele ja vai come√ßar a somar e vai armazenando estes valores
+        contagem <- contagem + 1 //a cada nota que for acrescentada ele vai somar mais 1, para no fim calcular a media
+        escreva("Digite a nota parcial (0 a 100) ou -1 para finalizar: ")
+        leia(nota)
+    fimenquanto
 
-   //enquanto a nota for diferente de -1 ele continuara pedindo
-   enquanto nota <> -1 faÁa
-      soman <- soman + nota //apos a primeira nota aplicada ele ja vai comeÁar a somar e vai armazenando estes valores
-      contagem <- contagem + 1 //a cada nota que for acrescentada ele vai somar mais 1, para no fim calcular a media
-      escreva("Digite a nota parcial (0 a 100) ou -1 para finalizar: ")
-      leia(nota)
-   fimenquanto
+    //calculo da media
+    se contagem > 0 ent√£o
+        media <- soman / contagem
+        
+        //se a media for maior igual a 70 o aluno √© aprovado
+        se media >= 70 ent√£o
+            escreval("ALUNO APROVADO! COM MEDIA ", media)
+        
+        //sen√£o se for menor ou igual a 40 ele reprovado automaticamente, sem direito a exame final
+        sen√£o
+            se media <=40 ent√£o
+                escreval( "ALUNO REPROVADO! COM MEDIA ",media)
 
-   //calculo da media
-   se contagem > 0 ent„o
-      media <- soman / contagem
-
-   //se a media for maior igual a 70 o aluno È aprovado
-   se media >= 70 ent„o
-      escreval("ALUNO APROVADO! COM MEDIA ", media)
-
-   //sen„o se for menor ou igual a 40 ele reprovado automaticamente, sem direito a exame final
-   sen„o
-        se media <=40 ent„o
-        escreval( "ALUNO REPROVADO! COM MEDIA ",media)
-
-   //se a media for menor que 70 o aluno ira realizar a prova de exame final
-   sen„o
-       se media < 70 ent„o
-       escreval("ALUNO EM EXAME FINAL! COM MEDIA ", media)
-       escreval("Digite a nota que o aluno tirou no exame final: ") //informar a nota tirada na prova de exame
-       leia(nota)
-       exame <- media + nota //se apos o exame que somara a ultima media com a nota desta prova o aluno n„o conseguir tirar mais de 100 ele È reprovado, caso contrario ele sera aprovado
-       se exame < 100 ent„o
-       escreval("ALUNO REPROVADO AP”S EXAME! COM MEDIA ",exame)
-
-   sen„o
-        escreval("ALUNO APROVADO AP”S EXAME! COM MEDIA", exame)
-
-
-      fimse
-      fimse
-      fimse
-      fimse
-
+            //se a media for menor que 70 o aluno ira realizar a prova de exame final
+            sen√£o
+                se media < 70 ent√£o
+                    escreval("ALUNO EM EXAME FINAL! COM MEDIA ", media)
+                    escreval("Digite a nota que o aluno tirou no exame final: ") //informar a nota tirada na prova de exame
+                    leia(nota)
+                    exame <- media + nota //se apos o exame que somara a ultima media com a nota desta prova o aluno n√£o conseguir tirar mais de 100 ele √© reprovado, caso contrario ele sera aprovado
+                    se exame < 100 ent√£o
+                        escreval("ALUNO REPROVADO APOS EXAME! COM MEDIA ",exame)
+                    sen√£o
+                        escreval("ALUNO APROVADO APOS EXAME! COM MEDIA", exame)
+                fimse
+            fimse
+        fimse
+    fimse
 
 Fimalgoritmo
