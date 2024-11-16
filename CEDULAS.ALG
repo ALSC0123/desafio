@@ -1,49 +1,54 @@
 Algoritmo "cedulas"
 
+//Suponha que voc√™ est√° programando um m√≥dulo contador de c√©dulas para caixas eletr√¥nicos. 
+//Escreva um programa que informa com quantas c√©dulas de Real podemos representar um dado valor.
+// Exemplo de resposta: R$ 218 = 2 c√©dulas de 100, 1 c√©dula de 10, 1 c√©dula de 5, 1 c√©dula de 2 e 1 c√©dula de 1. 
+//Procure minimizar o n√∫mero de c√©dulas usadas. Desconsidere valores com centavos, 
+//e suponha que a m√°quina sempre tem dispon√≠veis as c√©dulas necess√°rias.
+
 Var
    rs: inteiro
    resto, cem, cinquenta, dez, cinco, dois, um: inteiro
 
 Inicio
    //pedir a quantidade de reais
-   escreval("Contador de cÈdulas para caixas eletrÙnicos")
+   escreval("Contador de cedulas para caixas eletronicos")
    escreva("Escreva a quantidade de reais. R$: ")
    leia(rs)
+
    //resto fica com o valor do numero fornecido
    resto <- rs
 
-   //se for maior igual a 100 ent„o sera realizado o calculo da variavel cem
-   se resto >= 100 ent„o
-      cem <- resto \ 100 //valor fornecido divido por 100 (  "\"- divis„o inteira)
+   //se for maior igual a 100 entao sera realizado o calculo da variavel cem
+   se resto >= 100 ent√£o
+      cem <- resto \ 100 //valor fornecido divido por 100 (  "\"- divis√£o inteira)
       resto <- resto - (cem * 100) // vai pegar o valor total fornecido e vai subtrair pelo valor da variavel cem*100 (descobrindo assim o valor em reais que sera utilizado nos proximos passos)
    fimse
+
    //sera realizado o mesmo calculo nos proximos passor, apenas com valores diferentes
-   se resto >= 50 ent„o
+   se resto >= 50 ent√£o
       cinquenta <- resto \ 50
       resto <- resto - (cinquenta * 50)
    fimse
 
-
-   se resto >= 10 ent„o
+   se resto >= 10 ent√£o
       dez <- resto \ 10
       resto <- resto - (dez * 10)
    fimse
 
-
-   se resto >= 5 ent„o
+   se resto >= 5 ent√£o
       cinco <- resto \ 5
       resto <- resto - (cinco * 5)
    fimse
 
-
-   se resto >= 2 ent„o
+   se resto >= 2 ent√£o
       dois <- resto \ 2
       resto <- resto - (dois * 2)
    fimse
 
-
    um <- resto
+   
    //informara a quantidade de cedulas transformadas apartir do valor informado
-   escreval("R$", rs, ": ", cem, " cÈdulas de 100, ", cinquenta, " cÈdulas de 50, ", dez, " cÈdulas de 10, ", cinco, " cÈdulas de 5, ", dois, " cÈdulas de 2 e ", um, " cÈdula de 1.")
+   escreval("R$", rs, ": ", cem, " cedulas de 100, ", cinquenta, " cedulas de 50, ", dez, " cedulas de 10, ", cinco, " cedulas de 5, ", dois, " cedulas de 2 e ", um, " cedula de 1.")
 
 Fimalgoritmo
