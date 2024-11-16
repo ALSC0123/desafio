@@ -9,9 +9,9 @@ placar do jogo e
 //depois ○ placar do jogo e informa quantos pontos o apostador fez.
 
 Var
-    aposta1, aposta2: inteiro
-    placar1, placar2: inteiro
-    pontos: inteiro
+  aposta1, aposta2: inteiro
+  placar1, placar2: inteiro
+  pontos: inteiro
 
 Inicio
     //informar primeiro as apostas dos 2 times

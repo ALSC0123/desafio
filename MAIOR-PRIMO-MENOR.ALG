@@ -1,5 +1,7 @@
 Algoritmo "maior-primo-menor"
 
+//Escrever um programa para ler um n√∫mero inteiro do usu√°rio e
+//exibir o maior n√∫mero primo que seja menor do que o n√∫mero digitado.
 
 Var
     numero, maiorPrimo: inteiro
@@ -7,27 +9,27 @@ Var
 
 Inicio
     // pedir o numero
-    escreva("Informe um n˙mero inteiro: ")
+    escreva("Informe um numero inteiro: ")
     leia(numero)
 
-    // maior n˙mero primo menor que o n˙mero informado
+    // maior numero primo menor que o numero informado
     maiorPrimo <- 0
 
-    // vai verificar de 1 em 1 se È numero primo, subtraindo do numero informado ate chegar em um que seja apenas dividido por 1 e por ele mesmo
-    se (numero > 2) ent„o
-        se (numero - 1) mod 2 <> 0 ent„o
+    // vai verificar de 1 em 1 se √© numero primo, subtraindo do numero informado ate chegar em um que seja apenas dividido por 1 e por ele mesmo
+    se (numero > 2) ent√£o
+        se (numero - 1) mod 2 <> 0 ent√£o
             maiorPrimo <- numero - 1
-        sen„o
-            se (numero - 2) mod 2 <> 0 ent„o
+        sen√£o
+            se (numero - 2) mod 2 <> 0 ent√£o
                 maiorPrimo <- numero - 2
         fimse
     fimse
 
     // Mostrar o maior numero primo encontrado
-    se maiorPrimo > 0 ent„o
-        escreva("O maior n˙mero primo menor que ", numero, " È ", maiorPrimo)
-    sen„o
-        escreva("N„o existe n˙mero primo menor que ", numero)
+    se maiorPrimo > 0 ent√£o
+        escreva("O maior numero primo menor que ", numero, " √© ", maiorPrimo)
+    sen√£o
+        escreva("N√£o existe numero primo menor que ", numero)
     fimse
 
 Fimalgoritmo

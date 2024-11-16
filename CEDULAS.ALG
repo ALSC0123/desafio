@@ -47,7 +47,7 @@ Inicio
    fimse
 
    um <- resto
-   
+
    //informara a quantidade de cedulas transformadas apartir do valor informado
    escreval("R$", rs, ": ", cem, " cedulas de 100, ", cinquenta, " cedulas de 50, ", dez, " cedulas de 10, ", cinco, " cedulas de 5, ", dois, " cedulas de 2 e ", um, " cedula de 1.")
 
