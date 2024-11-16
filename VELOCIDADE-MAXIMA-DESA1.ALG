@@ -1,5 +1,12 @@
 Algoritmo "velocidade-maxima-desa1"
 
+//Escreva um programa que receba a velocidade m√°xima em uma avenida 
+//e a velocidade com que um motorista estava dirigindo nela.
+// Calcule a multa que o motorista vai receber, considerando que s√£o pagos R$ 5.00
+// por cada km/h que estiver acima da velocidade permitida (considere apenas n√∫meros inteiros). 
+//Se a velocidade do motorista estiver dentro do limite, o programa deve informar que n√£o h√° multa.
+
+
 Var
 
        vm, vd, diferenca, multa: inteiro
@@ -7,20 +14,20 @@ Var
 
 Inicio
        //pedir a valocidade maxima da avenida
-        escreva("Escreva a velocidade m·xima da avenida: ")
-        leia(vm)
+       escreva("Escreva a velocidade m√°xima da avenida: ")
+       leia(vm)
 
-        //pedir a velocidade maxima em que o motorista esta diriggindo
-        escreva("Escreva a velocidade em que o motorista esta dirigindo: ")
-        leia(vd)
+       //pedir a velocidade maxima em que o motorista esta dirigindo
+       escreva("Escreva a velocidade em que o motorista esta dirigindo: ")
+       leia(vd)
 
-        // descobrir se possui diferenÁa na velocidade, se for maior que 0 ent„o sera aplicado a multa, caso contrario n„o recebe multa
-        diferenca<- vd-vm
-        se diferenca>0 ent„o
-        multa<-diferenca*5
-        escreva("VocÍ foi multado! O valor da multa È: R$ ",multa)
-        sen„o
-         escreva("VocÍ n„o foi multado! arrasou")
-         fimse
+       // descobrir se possui diferen√ßa na velocidade, se for maior que 0 ent√£o sera aplicado a multa, caso contrario n√£o recebe multa
+       diferenca<- vd-vm
+       se diferenca>0 ent√£o
+           multa<-diferenca*5
+           escreva("Voc√™ foi multado! O valor da multa √©: R$ ",multa)
+       sen√£o
+           escreva("Voc√™ n√£o foi multado! arrasou")
+       fimse
 
 Fimalgoritmo
